@@ -14,7 +14,7 @@
 Due to file size limitations on GitHub, the dataset is not hosted in this repository. 
 * **Source:** You can download the official dataset here: [Kaggle - Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 * **Size:** ~150 MB (284,807 transactions).
-* **Features:** 28 PCA-transformed variables ($V1-V28$), Time, and Amount.
+* **Feature Selection:** To optimize performance, I performed feature importance analysis and selected the **20 most impactful variables** 
 
 ---
 
@@ -23,12 +23,3 @@ Due to file size limitations on GitHub, the dataset is not hosted in this reposi
 * **Scikit-Learn** (Random Forest, RobustScaler, Precision-Recall Metrics)
 * **Pandas & NumPy** (Data Cleaning and Transformation)
 * **Matplotlib & Seaborn** (Statistical Visualization)
-
----
-
-### 🔍 Key Insights from Analysis
-* **Beyond Accuracy:** Focus was placed on the **F1-Score (0.74)** to ensure a balance between catching fraud and avoiding false alarms.
-* **Outlier Resilience:** Utilized `RobustScaler` to handle extreme transaction amounts without biasing the model.
-* **Detection Capability:** The model achieves a **78.5% Recall**, identifying nearly 80% of fraudulent attempts in a highly imbalanced environment.
-
----
