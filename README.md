@@ -3,24 +3,32 @@
 ### 📌 Problem Statement & Project Impact
 
 * **The Problem: Market Information Asymmetry in Financial Transactions**
-    In the secondary vehicle market and financial transactions, fraud represents a tiny fraction of total volume (less than 0.2%). This extreme imbalance creates an "Accuracy Paradox" where standard models fail to catch malicious activity while maintaining high accuracy scores. This lack of transparency leads to financial losses and decreases trust in digital payment systems.
+    In financial ecosystems, fraud represents a tiny fraction of total volume (less than 0.2%). This extreme imbalance creates an "Accuracy Paradox" where standard models fail to catch malicious activity while maintaining high accuracy scores. This lack of transparency leads to financial losses and decreases trust in digital payment systems.
 
 * **The Solution: Machine Learning for Fair & Transparent Pricing**
-    This project develops a Machine Learning solution that leverages a specialized dataset to identify key features impacting transaction security. By using a **Random Forest Classifier**, the model provides a transparent tool for distinguishing between legitimate behavior and fraudulent anomalies. This ensures fair pricing and security for both buyers and sellers in the financial ecosystem.
+    This project develops a Machine Learning solution that leverages a specialized dataset to identify key features impacting transaction security. By using a **Random Forest Classifier**, the model provides a transparent tool for distinguishing between legitimate behavior and fraudulent anomalies. This ensures security for both providers and users in the financial ecosystem.
 
 ---
 
 ### 📊 Dataset Overview
-The dataset contains 284,807 transactions with the following features:
-* **V1-V28:** PCA-transformed behavioral features (top 20 selected for this model).
-* **V17, V14, V12, V10:** The most significant predictors identified during analysis.
-* **Amount:** The transaction value.
-* **Class:** Target variable (0 for Legitimate, 1 for Fraud).
+Due to file size limitations on GitHub, the dataset is not hosted in this repository. 
+* **Source:** You can download the official dataset here: [Kaggle - Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+* **Size:** ~150 MB (284,807 transactions).
+* **Features:** 28 PCA-transformed variables ($V1-V28$), Time, and Amount.
 
 ---
 
 ### 🛠️ Technologies Used
 * **Python** (Data Science Core)
-* **Scikit-Learn** (IsolationForest,Random Forest, RobustScaler, Precision-Recall Metrics)
+* **Scikit-Learn** (Random Forest, RobustScaler, Precision-Recall Metrics)
 * **Pandas & NumPy** (Data Cleaning and Transformation)
 * **Matplotlib & Seaborn** (Statistical Visualization)
+
+---
+
+### 🔍 Key Insights from Analysis
+* **Beyond Accuracy:** Focus was placed on the **F1-Score (0.74)** to ensure a balance between catching fraud and avoiding false alarms.
+* **Outlier Resilience:** Utilized `RobustScaler` to handle extreme transaction amounts without biasing the model.
+* **Detection Capability:** The model achieves a **78.5% Recall**, identifying nearly 80% of fraudulent attempts in a highly imbalanced environment.
+
+---
